@@ -26,7 +26,7 @@
                         <form action="upload.php?id=<?php echo $_GET["id"]?>" method ="post" enctype="multipart/form-data">
 
                             Select the file to upload:<br /><br />
-                            <input type ="file" name="fileUpload"><br /><br /><br />
+                            <input type ="file" onchange="this.form.submit()" name="fileUpload"><br /><br /><br />
                             <!-- form üzerinde herhangi bir değişiklik olması durumunda submit ediyor -->
                             <input class="btn btn-primary" type ="submit" value="Send File">
 

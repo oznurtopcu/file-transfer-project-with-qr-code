@@ -45,7 +45,19 @@ $qrcode = "https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=" . $fileUp
             </div>
         </div>
     </div>
-
+    <script>
+        setInterval(function() {
+            fetch('download-check.php?id=<?php echo $uuid ?>')
+                .then(function(response) {
+                    response.text().then(function(text) {
+                        if (text == "ready") {
+                            window.location = "download.php?id=<?php echo $uuid ?>"
+                        }
+                    })
+                })
+        }, 1000)
+    //her saniyede bir kontrol gerçekleştiriyor, ready mesajı gelirse direkt download sayfasına yönlendiriyor
+    </script>
     </body>
 
 </div>
