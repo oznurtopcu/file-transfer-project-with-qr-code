@@ -21,7 +21,7 @@ $dateTime = date("Y-m-d H:i:s", time());
 $timeValue = time();
 $x = 0;
 
-$fileName = guidv4(); //dosya adını uuid ile gizledik
+$fileName = guidv4();
 $fileType = $getFile["type"];
 $fileTmpName = $getFile["tmp_name"];
 $fileError = $getFile["error"];

@@ -20,5 +20,3 @@ if ($resultType == 'boolean') {
 } else {
     echo "not_ready";
 }
-
-//download işlemi için sistemin hazır olup olmadığını kontrol ettik

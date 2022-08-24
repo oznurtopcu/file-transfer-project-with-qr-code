@@ -4,7 +4,7 @@ require_once 'db-conn.php';
 include 'time-control.php';
 include 'insert-data.php';
 
-$fileUploadUrl = "http://192.168.10.136/file-transfer-with-qr-code/file-upload.php?id=$uuid";
+$fileUploadUrl = "http://localhost/file-upload.php?id=$uuid";
 $qrcode = "https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=" . $fileUploadUrl . "&choe=UTF-8";
 
 ?>
@@ -56,7 +56,6 @@ $qrcode = "https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=" . $fileUp
                     })
                 })
         }, 1000)
-    //her saniyede bir kontrol gerçekleştiriyor, ready mesajı gelirse direkt download sayfasına yönlendiriyor
     </script>
     </body>
 
